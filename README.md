@@ -3,7 +3,7 @@
 
 ### Homework
 
-- [Homework 1](https://github.com/hamburgcodingschool/L2C-2007/blob/master/homework/hw_1.md)
+- [✏️ Homework 1](https://github.com/hamburgcodingschool/L2C-2007/blob/master/homework/hw_1.md)
 
 ### Docs
 
