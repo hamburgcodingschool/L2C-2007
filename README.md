@@ -4,6 +4,7 @@
 ### ✏️ Homework
 
 - [Homework 1](https://github.com/hamburgcodingschool/L2C-2007/blob/master/homework/hw_1.md)
+- [Homework 2](https://github.com/hamburgcodingschool/L2C-2007/blob/master/homework/hw_2.md)
 
 ### 📄 Docs
 
