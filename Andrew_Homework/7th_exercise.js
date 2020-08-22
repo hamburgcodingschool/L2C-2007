@@ -1,0 +1,13 @@
+// EXERCISE: Create a program that checks if a given number is in an array and logs the fitting boolean to the console
+let numbers = [12, 41, 55, 12, 1, 2, 6, 5, 100, 20, 40];
+
+//SUM OF ALL NUMBERS
+let n = 33; // Variable for checking if this number is in array TODO: Ask for input to be set as variable 
+
+let result = false; // Sets assumption to false
+for (let i = 0; i < numbers.length; i++) {   
+    if (numbers[i] == n) {
+        result = true; // If number is found during an iteration, changes result to true
+    }
+}
+console.log(result); // Logs the result to the console
