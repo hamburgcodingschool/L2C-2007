@@ -16,22 +16,22 @@ while (userInput < placeholder) {
     text = 'That is not a number greater than 3 you dingus!'; 
 
   } else if (userInput == placeholder && placeholder == 3) {
-    // If original input is equal to 3, this should be the final and be appended by the additional equals information
+    // If original input is equal to 3, this should be the sum and the tautology printed
     sum += userInput;
     text += userInput + ' = ' + sum;
     
   } else if(userInput < placeholder && (userInput == 3)) { 
-    // If original input greater than 3, simply add the iteration to the text
+    // If original input greater than 3, simply add the iteration to the text and sum without additional symbols
     sum += userInput;
     text += userInput;
 
   } else if (userInput < placeholder && (userInput % 3 == 0 || userInput % 5 == 0)) {
-    // Adds all further iteration values less than original to sum only if divisible by 3 or 5
+    // Adds all further iteration values less than original to sum only if divisible by 3 or 5 with "+" as prefix
     sum += userInput;
     text += ' + ' + userInput; 
 
   } else if (userInput == placeholder && (userInput % 3 == 0 || userInput % 5 == 0)) {
-    // If original input is divisible by 3 or 5, but greater than 3, + should be prefixed with "+" and suffixed with final calculation
+    // If original input is divisible by 3 or 5, but greater than 3, iteration should be prefixed with "+" and suffixed with final calculation
     sum += userInput;
     text += ' + ' + userInput + ' = ' + sum; 
 
