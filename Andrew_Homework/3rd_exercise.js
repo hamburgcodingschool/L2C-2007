@@ -1,6 +1,6 @@
 let readlineSync = require('readline-sync');
 
-let amountDollar = readlineSync.question('Enter the amount you would like to conver to Euros: '); //Sets input of user as variabe for dollar
+let amountDollar = readlineSync.questionFloat('Enter the amount you would like to conver to Euros: '); //Sets input of user as variabe for dollar
 let exchangeEuro = 0.844; //Sets exchange rate for Euro for conversion
 let conversion = amountDollar * exchangeEuro;
 
