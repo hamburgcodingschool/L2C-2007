@@ -1,11 +1,11 @@
 // EXERCISE: Create a programm that takes a users input and calculates the sum from 1 to n only when that iteration is divisible by 3 or 5
 let readlineSync = require('readline-sync');
 
-let userInput = readlineSync.questionInt('Enter a number above 3: ');
+let userInput = readlineSync.questionInt('Enter a whole number above 3: ');
 let text = '';
 let sum = 0;
 
-for (let i = 0; i <= userInput; i++) { 
+for (let i = 1; i <= userInput; i++) { 
 
   if (userInput < 3) {
 
@@ -13,41 +13,32 @@ for (let i = 0; i <= userInput; i++) {
     text = 'That is not a whole number greater than 3 you dingus!;'
     break;
 
-  } else if (i < 3) {
+  } else if (i % 3 == 0 || i % 5 == 0) {
 
-    // If i is less than 3, continue to next iteration
-    continue;
-
-  } else if (i == userInput && userInput == 3) {
-
-    // If input was 3, add tautology to text to be logged to console after loop
+    // For all divisible iterations, add current value to sum
     sum += i;
-    text += i + ' = ' + sum;
 
-  } else if (i < userInput && i == 3) {
+  }
 
-    // Once i reaches 3, if input greater than 3, add first number to text
-    sum += i;
+  if (i == 3) {
+
+    //When iteration reaches 3, add only value to text
     text += i;
 
-  } else if (i < userInput && (i % 3 == 0 || i % 5 == 0)) {
+  } else if (i <= userInput && (i % 3 == 0 || i % 5 == 0)) {
 
-    // If an iteration is divisible by 3 or 5, add information to text with prefixed addition sign
-    sum += i;
+    // For all further iterations, add plus sign before value of current iteration
     text += ' + ' + i;
 
-  } else if (i == userInput && (i % 3 == 0 || i % 5 == 0)) {
+  }
+  
+  if (i == userInput) {
 
-    // If input itself is divisible by 3 or 5, add final part of calculation to the text
-    sum += i;
-    text += ' + ' + i + ' = ' + sum;
-
-  } else if (i == userInput) {
-
-    // If input not divisible by 3 or 5, simply add last part of calculation and sum to text
+    // Once final sum reached, add final sum to text
     text += ' = ' + sum;
 
   }
+
 }
 
 console.log(text);
