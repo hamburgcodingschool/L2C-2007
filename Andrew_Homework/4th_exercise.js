@@ -1,25 +1,16 @@
 let readlineSync = require('readline-sync');
 
 let userInput = readlineSync.questionInt('Enter a number: '); 
-let placeholder = userInput; //Saves input number before zeroing out 
 let text = ''; 
 let sum = 0;
-userInput = 0; //Zeroes out input to use as counter
 
+for (let i = 1; i <= userInput; i++) {
+    sum += i;
 
-while (userInput < placeholder) {
-
-    userInput++;  // Adds 1 to the input until it reaches original value
-    sum += userInput; //Adds each iteration to the sum
-    
-    if (userInput < placeholder) { 
-
-        text += userInput + ' + '; //Appends string with new value of userinput + "+"
-
+    if (i < userInput) {
+        text += i + ' + ';
     } else {
-
-        text += userInput + ' = ' + sum; //Once original input value is reached, appends = plus the sum
-        console.log(text); //Prints string including sum
+        text += i + ' = ' + sum;
+        console.log(text);
     }
-
 }
