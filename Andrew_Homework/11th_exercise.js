@@ -15,6 +15,12 @@ for (let i = 0; i < sentenceWords.length; i++) {
 }
 console.log(longest);
 
+for (let i = 0; i < sentenceWords.length; i++) {
+    while (sentenceWords[i].length < longest.length) {
+        sentenceWords[i] += ' ';
+    }
+}
+
 let sentenceFramed = '';
 let frameEdge = '*'
 for (let i = 0; i < sentenceWords.length; i++) {
