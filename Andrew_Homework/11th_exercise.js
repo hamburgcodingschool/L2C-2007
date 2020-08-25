@@ -24,9 +24,9 @@ for (let i = 0; i < sentenceWords.length; i++) { // For loop to add necessary ex
 
 }
 
-let frameEdge = ''; // For loop to calculate the number of * symbols needed for the top and bottom of frame
+let frameEdge = ''; 
 
-for (let i = -4; i < longest.length; i++) {
+for (let i = -4; i < longest.length; i++) { // For loop to calculate the number of * symbols needed for the top and bottom of frame
 
     frameEdge += '*'
 
