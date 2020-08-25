@@ -1,37 +1,50 @@
-// Write a program that asks the user for a sentence and outputs the words in the console, 
-// one per line, in a rectangular frame. For example the sentence "Hello World in a frame" gets printed as:
-
 let readlineSync = require('readline-sync');
  
-// Ask for sentence.
+// Ask user for sentence to be framed.
 let sentence = readlineSync.question('Enter the sentence you would like to be framed: ');
 let sentenceWords = sentence.split(' ');
 let longest = '';
 
-for (let i = 0; i < sentenceWords.length; i++) {
+for (let i = 0; i < sentenceWords.length; i++) { // For loop to find the longest word in the split input to be used in later calculations
+
     if (sentenceWords[i].length > longest.length) {
         longest = sentenceWords[i];
-    }
-}
-console.log(longest);
 
-for (let i = 0; i < sentenceWords.length; i++) {
-    while (sentenceWords[i].length < longest.length) {
-        sentenceWords[i] += ' ';
     }
+
+}
+
+for (let i = 0; i < sentenceWords.length; i++) { // For loop to add necessary extra spaces to words less in length than longest
+
+    while (sentenceWords[i].length < longest.length) {
+
+        sentenceWords[i] += ' ';
+
+    }
+
+}
+
+let frameEdge = ''; // For loop to calculate the number of * symbols needed for the top and bottom of frame
+
+for (let i = -4; i < longest.length; i++) {
+
+    frameEdge += '*'
+
 }
 
 let sentenceFramed = '';
-let frameEdge = '*'
-for (let i = 0; i < sentenceWords.length; i++) {
-    sentenceFramed = '* ' + sentenceWords[i] + ' *';
+
+for (let i = -1; i <= sentenceWords.length; i++) { // For loop for logging the framed text
+
+    if (i == -1 || i == sentenceWords.length) { // Immediately log the frameEdge at beginning of loop and again once i reaches end of loop
+
+        console.log(frameEdge);
+
+    } else {
+
+    sentenceFramed = '* ' + sentenceWords[i] + ' *'; // Concactenates and logs framed words to console in-between frameEdges
     console.log(sentenceFramed);
 
+    }
+
 }
-
-// console.log(sentenceWords);
-
-// for (let i = 0; i < sentence.length; i++) {
-//     sentenceWord = sentence[i]
-//     console.log('* ' + sentenceWord + ' *');
-// }
