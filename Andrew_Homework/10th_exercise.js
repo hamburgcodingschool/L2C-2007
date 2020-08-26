@@ -8,4 +8,4 @@ for (let i = name.length - 1; i >= 0; i--) {
     nameBackwards += name[i];
 }
 
-console.log(nameBackwards);
+console.log(nameBackwards.toUpperCase());
