@@ -7,7 +7,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "My Awesome Code Launcher",
+            "name": "My Awesome Launcher!!!!!",
             "skipFiles": [
                 "<node_internals>/**"
             ],
