@@ -24,3 +24,13 @@ for (let i = 1; i <= 100; i++) {
 // HOMEWORK:
 // NOW PRINT THE FIRST 100 PRIME NUMBERS!!!!!
 
+let counter = 0;
+let number = 1;
+
+while (counter < 100) {
+    if (prime(number)) {
+        counter ++;
+        console.log(counter + ": " + number);
+    }
+    number ++;
+}
