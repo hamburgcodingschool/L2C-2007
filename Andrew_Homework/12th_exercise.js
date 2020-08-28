@@ -16,7 +16,8 @@ function triangle(size) {
     return triangleRow = ''; // Resets variable to empty string for further triangles to be printed
 }
 
-function print(amount) { // Function for passing through user amount through the triangle function
+// Function for passing through user amount through the triangle function
+function numOfTriangles(amount) { 
     for (let i= 0; i < amount; i++) {
         triangle(size); // For each iteration of "amount", calls triangle function for logging
     }
@@ -26,5 +27,5 @@ function print(amount) { // Function for passing through user amount through the
 if (size < 2 || amount < 1) {
     console.log('Size must be greater than 1 and amount must be at least 1!')
 } else {
-    print(amount);
+    numOfTriangles(amount);
 }
