@@ -1,7 +1,7 @@
 # Homework
 - [Exercise 13](#exercise-13)
-- [Exercise 13](#exercise-14)
-- [Exercise 13](#exercise-15)
+- [Exercise 14](#exercise-14)
+- [Exercise 15](#exercise-15)
 
 ## Exercise 13
 ### Xmas tree 🎄
