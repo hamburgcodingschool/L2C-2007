@@ -40,6 +40,29 @@ let readlineSync = require('readline-sync');
 // 10  20  30  40  50  60  70  80  90 100
 //---------------------------------------------------------
 
+//14.3 - THIRD ATTEMPT: function that multipl. n by all numbers from 1 to m and prints resulting values as a string
+//it also adds spaces before the number if that number has less than 3 characters ("digits") to create right alignment
+
+// function NumbersMultipl (n, m) {
+//     let string = "";
+//     for (let i = 1; i < m; i++) {
+//       let char = (n * i).toString();
+//       let space = " ";
+//       if (i > 1) {
+//             string += space.repeat(4 - char.length) + char;
+//       } else {
+//         string += space.repeat(2 - char.length) + char;
+//       }        
+//     }
+//     return string;
+//   }
+  
+//   for (let i = 1; i <= 10; i++) {
+//     console.log(NumbersMultipl(i, 11));
+//   }
+
+//14.2 - SECOND ATTEMPT: creating array, multiplying it by each of its values (or, since it works in this case, by current counter value)
+
 // //starting with a string bc array would be changed during the first loop
 // let table = "1 2 3 4 5 6 7 8 9 10"
 
@@ -51,17 +74,17 @@ let readlineSync = require('readline-sync');
 //     return array;
 // }
 
+// // splitting string to array, multiplying array, then joining array items to string again
 // for (let i = 1; i <= 10; i++) {
 //     let tableArray = table.split(" ");
-//     multiplyArray(tableArray, i); // can replace i with tableArray[i-1] if array numbers you want to multiply by by cannot be represented by counter 
+//     multiplyArray(tableArray, i); // can replace i with tableArray[i-1] if array numbers you want to multiply by cannot be represented by counter 
 //     console.log(tableArray.join(" "));
 //     // more complicated version:
 //     // console.log(tableArray[0] + " " + tableArray[1] + " " + tableArray[2] + " " + tableArray[3] + " " + tableArray[4] + " " 
 //     // + tableArray[5] + " " + tableArray[6] + " " + tableArray[7] + " " + tableArray[8] + " " + tableArray[9]);
 // }
 
-
-//first attempt: two counters > while loops, not working
+//14.1 - FIRST ATTEMMPT: two counters > while loops, DOES NOT WORK
 
 // let table = "1 2 3 4 5 6 7 8 9 10"
 
@@ -87,28 +110,28 @@ let readlineSync = require('readline-sync');
 
 // console.log("Welcome to the number guessing game! Can you guess what number the algorithm will come up with? You've got 6 tries.")
 
-//   for (let i = 0; i < 6; i++) {
-//     let a = 0;
-//     if (i == 0) {
-//       a = readlineSync.question("Please choose a number between 1 and 100. ");
-//     } else {
-//       a = readlineSync.question((6 - i) + " chance(s) left! Try again. ");
-//       }
-    
-//     while (isNaN(a) || a > 100 || a < 1 ) {
-//       if (isNaN(a)) {
-//         a = readlineSync.question("That value is not a number! Now make a better choice for try #" + (i+1) + " ");
-//       } else {
-//         a = readlineSync.question("Between 1 and 100! Now make a better choice for try #" + (i+1) + " ");
-//         }
+// for (let i = 0; i < 6; i++) {
+//   let a = 0;
+//   if (i == 0) {
+//     a = readlineSync.question("Please choose a number between 1 and 100. ");
+//   } else {
+//     a = readlineSync.question((6 - i) + " chance(s) left! Try again. ");
 //     }
     
-//     let x = random(1, 100);
-//     if (x == a) {
-//       console.log("You won!");
-//       break;
-//     } else if (i == 5) {
-//       console.log("GAME OVER. You lose!");
+//   while (isNaN(a) || a > 100 || a < 1 ) {
+//     if (isNaN(a)) {
+//       a = readlineSync.question("That value is not a number! Now make a better choice for try #" + (i+1) + " ");
+//     } else {
+//       a = readlineSync.question("Between 1 and 100! Now make a better choice for try #" + (i+1) + " ");
 //       }
 //   }
+    
+//   let x = random(1, 100);
+//   if (x == a) {
+//     console.log("You won!");
+//     break;
+//   } else if (i == 5) {
+//     console.log("GAME OVER. You lose!");
+//     }
+// }
 
