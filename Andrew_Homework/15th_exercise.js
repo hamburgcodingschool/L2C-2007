@@ -9,7 +9,7 @@ function random(min, max) {
 let number = random(1, 100);
 let correctGuess = false;
 
-for (i = 6; i > 0; i--) {
+for (let i = 6; i > 0; i--) {
     let guess = readlineSync.questionInt('Guess the number: ');
 
     if (guess < number) {

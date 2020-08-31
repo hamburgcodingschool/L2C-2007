@@ -2,7 +2,7 @@
 let multiplicationTable = '\n';
 
 function multiply(number) {
-    for (i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 10; i++) {
         let formatter = i * number; // Variable for adding spaces before numbers to improve readability
         // Numbers below 10 will have 2 spaces before iteration, below 100 only 1 space
         if (formatter < 10) {
@@ -24,8 +24,8 @@ function multiply(number) {
 
 // Function for passing through the size of table to multiplication table function
 function table(rows) {
-    for (j = 1; j <= rows; j++) {
-        multiply(j);
+    for (let i = 1; i <= rows; i++) {
+        multiply(i);
     }
     return multiplicationTable;
 }
