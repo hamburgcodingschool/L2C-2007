@@ -10,20 +10,22 @@ let number = random(1, 100);
 let correctGuess = false;
 
 for (let i = 6; i > 0; i--) {
-    let guess = readlineSync.questionInt('Guess the number: ');
+    let guess = readlineSync.questionInt('Guess the number between 1 and 100 (' + i + ' attempt(s) remaining):\n');
 
-    if (guess < number) {
+    if (guess < number && i > 1) {
         console.log('Too low, try again!');
-    } else if (guess > number) {
+    } else if (guess > number && i > 1) {
         console.log('Too high, try again!');
-    } else {
+    }
+
+    if (guess == number) {
         correctGuess = true;
         break;
     }
 }
 
 if (correctGuess) {
-    console.log('Great job! You won against a computer. Don\'t you feel special...');
+    console.log('\nGreat job! You won against a computer. Don\'t you feel special...\n');
 } else {
-    console.log('Pathetic... Can\'t even pick numbers right, loser!');
+    console.log('\nPathetic... Can\'t even pick numbers right, loser!\n');
 }
