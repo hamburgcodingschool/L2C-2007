@@ -32,5 +32,5 @@ function PerfectNumUntil(x) {
 }
 
 let x = 1000;
-console.log("The 'perfect numbers' until " + x + " are:")
+console.log("The 'perfect numbers' below " + x + " are:")
 console.log(PerfectNumUntil(x));
