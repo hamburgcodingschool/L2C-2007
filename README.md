@@ -8,6 +8,7 @@
 - [Homework 3](https://github.com/hamburgcodingschool/L2C-2007/blob/master/homework/hw_3.md)
 - [Homework 4](https://github.com/hamburgcodingschool/L2C-2007/blob/master/homework/hw_4.md)
 - [Homework 5](https://github.com/hamburgcodingschool/L2C-2007/blob/master/homework/hw_5.md)
+- [Homework 6](https://github.com/hamburgcodingschool/L2C-2007/blob/master/homework/hw_6.md)
 
 ### 📄 Docs
 
