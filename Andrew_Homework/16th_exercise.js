@@ -55,13 +55,13 @@ function perfectNumber(upTo) {
 function checkIfPerfectNumber(number) { // Function to check if a single number is perfect
     let divisor = 0;
 
-    for (let j = 1; j < number; j++) { // User parameter number for the loop
+    for (let i = 1; i < number; i++) { // User parameter number for the loop
 
-        if (number % j == 0) { // If parameter divided by current iteration has no remainders, add this value to the divisor
-            divisor += j;
+        if (number % i == 0) { // If parameter divided by current iteration has no remainders, add this value to the divisor
+            divisor += i;
         }
         
-        if (j == number - 1 && divisor == number) { // If the number is perfect once reaching last iteration, return number with space
+        if (i == number - 1 && divisor == number) { // If the number is perfect once reaching last iteration, return number with space
             return perfectNumForFunction += number + ' ';
         }
     }
