@@ -3,7 +3,7 @@
 // OPTION I with (nested) loops
 let perfectNum = ''; // variable for adding perfect numbers
 
-for (let i = 6; i < 1000; i++) {
+for (let i = 6; i < 10000; i++) {
     let divisor = 0; // Divisor set in loop to reset each time i increases
 
     for (let j = 1; j < i; j++) { // Secondary loop to continuously check each divisors up to i
@@ -42,7 +42,7 @@ function perfectNumber1(upTo) {
     return perfectNum1;
 }
 
-console.log(perfectNumber1(1000));
+console.log(perfectNumber1(10000));
 
 //OPTION III with 2 separate functions
 function perfectNumber(upTo) {
@@ -70,5 +70,5 @@ function checkIfPerfectNumber(number) { // Function to check if a single number 
 
 let perfectNumForFunction = '';
 
-console.log(perfectNumber(1000));
+console.log(perfectNumber(10000));
 // console.log(checkPerfectNumbers(9));
